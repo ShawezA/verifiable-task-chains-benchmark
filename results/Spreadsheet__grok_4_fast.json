@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 171.10168737049997,
+      "price": 0.0107488,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 205.25395339699998,
+      "price": 0.010934800000000001,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 185.96185176859998,
+      "price": 0.02869675,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

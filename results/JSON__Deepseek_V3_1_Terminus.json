@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 76.69517558485714,
+      "price": 0.05927472,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 6.9104019359999995,
+      "price": 0.00147706,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 44.499998888,
+      "price": 0.03420387,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 5,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 79.10519984754545,
+      "price": 0.045522450000000006,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 6,
+      "errors": 7,
+      "recoveries": 5,
+      "duration_sec": 108.00532082307693,
+      "price": 0.07002815000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 70.46363946022223,
+      "price": 0.036156999999999995,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

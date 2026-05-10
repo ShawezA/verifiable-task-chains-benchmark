@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 48.926887005000005,
+      "price": 0.051987200000000004,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 6,
+      "errors": 7,
+      "recoveries": 5,
+      "duration_sec": 85.76172613653846,
+      "price": 0.24861412,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 75.23564188499999,
+      "price": 0.0656176,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

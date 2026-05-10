@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 91.24230556683334,
+      "price": 0.82678701,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 89.01009972366667,
+      "price": 0.8386029399999999,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 79.4137411425,
+      "price": 0.6700096499999999,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

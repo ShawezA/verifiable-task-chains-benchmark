@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 79.93780339433333,
+      "price": 0.27517250000000004,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 88.47797049366666,
+      "price": 0.31119375,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 70.96990922075,
+      "price": 0.34934036,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

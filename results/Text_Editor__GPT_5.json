@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 8,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 135.497804754,
+      "price": 1.3512895,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 145.14197817,
+      "price": 0.23565175,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 110.44703803199998,
+      "price": 0.18946875000000002,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

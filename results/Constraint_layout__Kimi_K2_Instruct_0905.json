@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 60.4997279185,
+      "price": 0.0212338,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 15.052900255,
+      "price": 0.02638356,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 47.717887874000006,
+      "price": 0.023682599999999998,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

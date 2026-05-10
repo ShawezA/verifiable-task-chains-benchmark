@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 7.047125616500001,
+      "price": 0.0098641,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 3.3956263265,
+      "price": 0.0035957000000000003,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 2.939335218,
+      "price": 0.0027167,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

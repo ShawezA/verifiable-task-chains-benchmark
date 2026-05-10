@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "GPT 5 mini",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 130.71864211566665,
+      "price": 0.09920369999999999,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 108.715676826,
+      "price": 0.06704094999999999,
+      "ICCD": 1
+    },
+    {
+      "run": 1,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 189.21068150666667,
+      "price": 0.18521079999999998,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

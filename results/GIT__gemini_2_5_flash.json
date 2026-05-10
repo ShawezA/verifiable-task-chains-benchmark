@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 7.147150247333333,
+      "price": 0.015563299999999999,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 9.907664629666668,
+      "price": 0.019656,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 7.956631591333334,
+      "price": 0.0176113,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

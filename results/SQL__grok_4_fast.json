@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 64.5747942406,
+      "price": 0.0128797,
+      "ICCD": 3
+    },
+    {
+      "run": 2,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 105.56268596177776,
+      "price": 0.0354178,
+      "ICCD": 3
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 138.790704912625,
+      "price": 0.0425158,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

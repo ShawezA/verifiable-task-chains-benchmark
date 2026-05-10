@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 82.94631847257142,
+      "price": 0.0873951,
+      "ICCD": 3
+    },
+    {
+      "run": 2,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 87.38677641071429,
+      "price": 0.0947134,
+      "ICCD": 3
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 92.69727266857142,
+      "price": 0.09464360000000001,
+      "ICCD": 3
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "GPT 5 mini",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 7,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 114.85279831827273,
+      "price": 0.21655494999999997,
+      "ICCD": 3
+    },
+    {
+      "run": 2,
+      "len": 5,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 120.47200997529998,
+      "price": 0.2094649,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 5,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 81.5746564981,
+      "price": 0.1274993,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

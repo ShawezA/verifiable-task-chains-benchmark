@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 100.86086642842857,
+      "price": 0.4549785,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 6,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 115.11240607818182,
+      "price": 1.000695,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 6,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 129.6015098492727,
+      "price": 1.0295320000000001,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 26.913563650166665,
+      "price": 0.034878099999999995,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 41.851003412,
+      "price": 0.0164026,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 46.11764804999999,
+      "price": 0.036484,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

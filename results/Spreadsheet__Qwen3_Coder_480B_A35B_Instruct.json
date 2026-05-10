@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 18.228377957,
+      "price": 0.00565415,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 64.2065346505,
+      "price": 0.005118950000000001,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 32.540707121000004,
+      "price": 0.00148075,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 102.742759598,
+      "price": 0.49183425000000003,
+      "ICCD": 1
+    },
+    {
+      "run": 1,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 155.6772569618889,
+      "price": 0.8380512499999999,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 92.04075268849999,
+      "price": 0.2638695,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

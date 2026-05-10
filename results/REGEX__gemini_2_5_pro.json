@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 83.46976835783333,
+      "price": 0.66534351,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 65.78468628583333,
+      "price": 0.53921373,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 64.13384314614287,
+      "price": 0.5952809299999999,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

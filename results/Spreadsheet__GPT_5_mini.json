@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "GPT 5 mini",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 140.10306594899998,
+      "price": 0.08029850000000001,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 175.91538645216667,
+      "price": 0.12222735000000001,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 166.41160055533337,
+      "price": 0.1153377,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

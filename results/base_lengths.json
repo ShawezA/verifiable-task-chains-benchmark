@@ -1,0 +1,822 @@
+{
+  "GraphQL": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        2,
+        5,
+        5
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        3,
+        5,
+        3
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "JSON": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        3,
+        7,
+        3
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        4,
+        3,
+        6
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        3,
+        0,
+        3
+      ]
+    }
+  ],
+  "SQL": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        0,
+        4,
+        4
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        7,
+        5,
+        5
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        2,
+        6,
+        4
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        3,
+        5,
+        4
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        4,
+        1,
+        3
+      ]
+    }
+  ],
+  "Rigid Body": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        6,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "REGEX": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        4,
+        6,
+        6
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        3,
+        5,
+        3
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        5,
+        6,
+        4
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        5,
+        1,
+        5
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        6,
+        3
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        5,
+        4,
+        4
+      ]
+    }
+  ],
+  "Concurrency": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        3,
+        5,
+        2
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        1,
+        2,
+        2
+      ]
+    }
+  ],
+  "Text Editor": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        8,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "GIT": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        7,
+        8,
+        4
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "Constraint layout": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        3,
+        2,
+        5
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "Spreadsheet": [
+    {
+      "Model": "GPT 5",
+      "Runs": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "GPT 5 mini",
+      "Runs": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "Model": "GPT 5 nano",
+      "Runs": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 pro",
+      "Runs": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "Model": "gemini 2.5 flash",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "grok 4 fast",
+      "Runs": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "Model": "Kimi-K2-Instruct-0905",
+      "Runs": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "Model": "Qwen3-Coder-480B-A35B-Instruct",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "GLM 4.6",
+      "Runs": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "Model": "Deepseek V3.1 Terminus",
+      "Runs": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

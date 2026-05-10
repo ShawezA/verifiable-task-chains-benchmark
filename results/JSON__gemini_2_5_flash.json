@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 4.2433908255,
+      "price": 0.0047796,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 6.038235765,
+      "price": 0.0072124,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 4.30182381,
+      "price": 0.0065328999999999995,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

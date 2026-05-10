@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 153.5227302514,
+      "price": 0.0236003,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 232.24443511375,
+      "price": 0.0304433,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 233.09274428120003,
+      "price": 0.040732199999999996,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

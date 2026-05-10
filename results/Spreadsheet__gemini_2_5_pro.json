@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 124.28088254919999,
+      "price": 0.75039732,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 113.56638248699998,
+      "price": 1.02097683,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 94.0042611694,
+      "price": 0.6773741200000001,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

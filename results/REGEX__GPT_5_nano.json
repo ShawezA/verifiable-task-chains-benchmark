@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "GPT 5 nano",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 59.27719088159999,
+      "price": 0.01341676,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 64.15082779011111,
+      "price": 0.03851589,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 48.29503634724999,
+      "price": 0.01163685,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

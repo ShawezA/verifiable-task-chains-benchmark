@@ -1,0 +1,58 @@
+# Concurrency
+
+Write a Scheduler class that manages cooperative concurrent tasks. It needs an add method that takes a generator function and any additional arguments, registers it as a task, and returns a unique integer task ID starting from zero and incrementing sequentially in the order tasks are added. Add a run method that executes all scheduled tasks in the order they were added until they complete by advancing each task at its yield points. Also write a SharedObject class that's just a simple container with a value attribute for tasks to communicate through. The scheduler must be deterministic, always producing the same final SharedObject state given the same tasks.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Extend the scheduler to record and replay execution traces. Modify run to return a trace capturing the exact sequence of scheduling decisions. Add a replay method that takes a trace and re-executes tasks following the same sequence to reproduce identical results, even across different scheduler instances with the same tasks. Everything else stays deterministic.
+
+
+---
+
+
+Enhance the scheduler to systematically explore all possible thread interleavings via backtracking. The run method should now perform an exhaustive search of all execution paths and return a list of all unique final states of the SharedObject found across all interleavings, in deterministic order. Remove the replay method as the focus shifts to exploration. The scheduler must correctly handle tasks that terminate at different times while maintaining deterministic results.
+
+
+---
+
+
+Introduce locking to manage access to shared resources. Write a Lock class with acquire and release methods that are both generator functions yielding control to the scheduler. When a task calls acquire on a held lock it blocks until the lock becomes available, and calling release frees the lock and potentially unblocks a waiting task. Update the scheduler to manage lock states and task blocking and unblocking, ensuring the exploration correctly models all valid interleavings of lock operations. The run method still returns a list of all possible final SharedObject states.
+
+
+---
+
+
+Implement Dynamic Partial Order Reduction to prune redundant interleavings from the search space. The public API of Scheduler, SharedObject, and Lock remains unchanged, and run must still return an identical list of all unique final states. However, the internal search algorithm should now identify and skip execution paths that are equivalent to ones already explored, significantly reducing the number of schedules examined for programs with independent operations while guaranteeing the same results.
+
+
+---
+
+
+Introduce buffered channels for inter-task communication. Write a Channel class initialized with a buffer capacity that provides send and receive generator methods. Calling send with a value adds it to the channel but blocks if the buffer is full, while receive retrieves a value but blocks if the channel is empty. For channels with capacity zero, send and receive rendezvous atomically, and once matched the scheduler resumes the sender first then the receiver in a fixed deterministic order. Update the scheduler to handle blocking and unblocking on channel operations, and ensure the exploration engine with DPOR correctly models all valid interleavings involving channels. 
+
+
+---
+
+
+Add deadlock detection to the scheduler's exploration. A deadlock is a state where one or more tasks are blocked indefinitely and can never resume. Modify run to return a tuple containing two elements: the list of unique SharedObject states from non-deadlocked executions as before, and a list of trace objects where each trace is a sequence of scheduling decisions leading to a deadlocked state. If no deadlocks are found the second list is empty, and the entire result must be deterministic.
+
+
+---
+
+
+Implement data race detection. A data race occurs when two or more tasks access the same shared memory location without synchronization and at least one access is a write. Modify SharedObject to track read and write operations on its value attribute and make the scheduler aware of these operations. Change run to return a three-element tuple: the final states list, the deadlock traces list, and a new list of race report objects where each report identifies the tasks involved and provides a trace to reproduce the race. The race reports list must be deterministic with no duplicates.
+
+
+---
+
+
+Introduce state hashing to avoid re-exploring equivalent global states. A global state includes all task instruction pointers, the SharedObject, and all synchronization primitives like locks and channels. Keep all public APIs unchanged and ensure run returns identical results to the previous step. Internally, maintain a set of visited global states and prune any execution path that reaches a state already seen.
+
+
+---
+
+
+Implement counterexample minimization for discovered bugs. When a deadlock or data race is found, the initial trace can be unnecessarily long with many irrelevant steps. Modify run so that the traces returned in the deadlock traces and race reports lists are now minimal, meaning no single scheduling decision can be removed without the bug disappearing. Use a reduction algorithm like simplified delta debugging to produce these minimal traces, keeping the final output deterministic.

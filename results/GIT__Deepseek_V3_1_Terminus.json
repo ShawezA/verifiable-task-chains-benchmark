@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 25.916989417,
+      "price": 0.00580955,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 27.608452115333332,
+      "price": 0.0054288800000000005,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 18.426310345999998,
+      "price": 0.00682828,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

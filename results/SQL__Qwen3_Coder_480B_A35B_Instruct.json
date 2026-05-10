@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 7.353325071666667,
+      "price": 0.00617863,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 12.504044296000002,
+      "price": 0.03064294,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 19.102520527000003,
+      "price": 0.03026778,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

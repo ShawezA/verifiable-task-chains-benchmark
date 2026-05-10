@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 17.447982724142857,
+      "price": 0.02546026,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 19.5021087215,
+      "price": 0.0021817,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 9.007798816000001,
+      "price": 0.0034003999999999996,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

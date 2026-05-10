@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 90.025049424,
+      "price": 0.022691199999999998,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 119.8025511925,
+      "price": 0.024582200000000002,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 65.88430142371429,
+      "price": 0.0653303,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

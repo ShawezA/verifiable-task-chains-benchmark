@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 23.381233701,
+      "price": 0.05911032499999999,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 14.036222784,
+      "price": 0.0194931,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 20.271650231,
+      "price": 0.054424075,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

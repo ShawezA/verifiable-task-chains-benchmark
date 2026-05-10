@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 62.40714255559999,
+      "price": 0.36711499999999997,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 73.9782345636,
+      "price": 0.43611,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 84.21854813259999,
+      "price": 0.48379750000000005,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

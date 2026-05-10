@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 82.71524490266667,
+      "price": 0.36406325,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 103.17698643516667,
+      "price": 0.464277,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 51.32089399975,
+      "price": 0.12745225,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

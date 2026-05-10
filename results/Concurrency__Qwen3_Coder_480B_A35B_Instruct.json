@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 6.985788853000001,
+      "price": 0.0004432,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 4.292559508,
+      "price": 0.0004324,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 2.6947273385,
+      "price": 0.00033937,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

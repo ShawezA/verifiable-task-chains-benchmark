@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 34.644440445,
+      "price": 0.0038573,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 51.448803801333334,
+      "price": 0.0083699,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 24.30655291,
+      "price": 0.0164207,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

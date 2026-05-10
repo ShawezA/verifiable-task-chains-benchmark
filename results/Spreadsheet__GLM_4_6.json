@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 68.4400063778,
+      "price": 0.07155092,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 62.4658710555,
+      "price": 0.016628,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 57.902312957999996,
+      "price": 0.021366,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

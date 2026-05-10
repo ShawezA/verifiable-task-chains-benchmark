@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 93.17867918179999,
+      "price": 0.0495085,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 60.76704784575,
+      "price": 0.0331918,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 69.507294829,
+      "price": 0.057437100000000005,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

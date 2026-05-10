@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 95.41576874149999,
+      "price": 0.12055625,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 4,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 111.47458073128571,
+      "price": 0.45173450000000004,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 154.24841516322223,
+      "price": 0.82084025,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

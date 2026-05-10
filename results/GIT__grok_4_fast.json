@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 38.58231483466667,
+      "price": 0.0045013,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 22.983104139,
+      "price": 0.0037856,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 33.663361136,
+      "price": 0.0035417,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

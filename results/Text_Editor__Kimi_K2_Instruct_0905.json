@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 25.719348478,
+      "price": 0.0052764,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 27.561256159499997,
+      "price": 0.0052308,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 16.5788165566,
+      "price": 0.0257847,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

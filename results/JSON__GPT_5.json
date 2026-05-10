@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 147.18154478519997,
+      "price": 0.36881175,
+      "ICCD": 3
+    },
+    {
+      "run": 2,
+      "len": 7,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 173.9058518963846,
+      "price": 1.23552375,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 132.0805451008,
+      "price": 0.38136125000000004,
+      "ICCD": 3
+    }
+  ],
+  "notes": ""
+}

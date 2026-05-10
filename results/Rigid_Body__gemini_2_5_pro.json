@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 80.80253227266665,
+      "price": 0.61377299,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 46.04865583625,
+      "price": 0.22665605,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 52.30073626333333,
+      "price": 0.43931348,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "GPT 5 mini",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 71.467241374,
+      "price": 0.040878,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 115.16759448677779,
+      "price": 0.13945525,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 75.75058221722222,
+      "price": 0.1253851,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

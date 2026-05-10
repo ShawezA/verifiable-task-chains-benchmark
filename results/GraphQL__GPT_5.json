@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 189.77309527100002,
+      "price": 0.53731,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 225.481432128,
+      "price": 0.41669725,
+      "ICCD": 3
+    },
+    {
+      "run": 3,
+      "len": 5,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 172.05627945066666,
+      "price": 0.7239262499999999,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

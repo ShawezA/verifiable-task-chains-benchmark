@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 21.155708564999998,
+      "price": 0.008068569999999999,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 51.779110296333336,
+      "price": 0.01080879,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 25.157686939500003,
+      "price": 0.00417191,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

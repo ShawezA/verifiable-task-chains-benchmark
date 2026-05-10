@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 3.5048105135,
+      "price": 0.0037177,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 2.319232241,
+      "price": 0.0029674000000000002,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 13.955636915999998,
+      "price": 0.07027894999999999,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

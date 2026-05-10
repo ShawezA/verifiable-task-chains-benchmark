@@ -1,0 +1,54 @@
+# Text editor
+
+Write a "TextBuffer" class optimized for frequent insertions and deletions. Initialize it with starting text and make it viewable as a string. Add insert(index, text) and delete(index, length) methods, plus len() for character count and getitem for Python indexing (negatives allowed) and slicing. All raise IndexError when invalid. Index arguments are zero-based non-negative. Insert can place text anywhere including at the end. Delete needs to start at an existing character and the deletion can't run past the buffer's end.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Extend the "TextBuffer" to support stable positional identifiers. Add a method that creates a stable handle for any character position and another that takes a handle and reports its current character index, even after modifications. These position objects must implement eq and rich comparison to reflect document order. Your get_stable_position(index) accepts any index from 0 through len(buffer) and raises IndexError otherwise. Your get_index_for_position(position) returns the current index, returns len(buffer) for end-of-document, and raises ValueError for invalid handles including those from other buffer instances. When a character is deleted, its handle should point to the following character.
+
+
+---
+
+
+Write a "Replica" class to manage collaborative editing. Initialize each Replica with a unique ID and optional initial text. Provide methods for local insertions and deletions that return Operation objects describing the changes. Add a method to apply operations received from other replicas. Replicas starting with identical text and applying the same operations must converge to identical final text regardless of operation order. Expose get_text() to return the document string. Operations must be non-None and implement eq for structural equality. The apply_remote(op) method must be idempotent and ensure convergence.
+
+
+
+---
+
+
+Improve your "Replica" to correctly handle complex concurrent scenarios. A character that is deleted by one user while being edited by another should remain deleted. Ensure that previously deleted text cannot reappear due to out-of-order operation processing. The existing API must not change, but its implementation must now be robust against these race conditions.
+
+---
+
+
+Add stable markers like cursors to your Replica. Implement add_marker(index, affinity) returning a marker_id where affinity is "left" or "right". Markers track their position through local and remote edits. When text is inserted exactly at a marker's index, "left" affinity keeps the marker before the new text while "right" places it after. Provide get_marker_index(marker_id) returning the current index and raising KeyError for unknown IDs. Provide delete_marker(marker_id) after which get_marker_index must raise KeyError for that ID.
+
+
+---
+
+
+Implement an undo/redo system for the "Replica". Add "undo()" and "redo()" methods that reverse or re-apply only the user's local changes. This must work correctly even when remote edits from other collaborators are received between the original action and the undo command.
+
+
+---
+
+
+Add a health-check method to the TextBuffer to ensure it remains performant. This method, named _check_invariants(), should analyze the buffer's internal structure and raise a custom BufferInvariantError if it detects a state that would lead to poor performance such as excessive fragmentation. The exact conditions for this error are for you to determine and justify.
+
+
+---
+
+Add snapshotting to the Replica so new collaborators can join quickly. Implement get_snapshot() to serialize the replica's entire state into a JSON-serializable Python dictionary. Add the class method from_snapshot(replica_id, snapshot) to create a new replica directly from a snapshot. The new replica must show the same user-visible text as in the snapshot.
+
+
+---
+
+Metadata for deleted text, called tombstones, accumulates over time. Implement get_causality_state() on the Replica to report its current causal state in JSON-serializable format. Implement compact(peer_states) which safely purges obsolete tombstones given the states of all other replicas in the session. This must not change user-visible text and must be conservative if any replica's state is missing. After compaction, old operations referring to garbage-collected history should have no effect or be handled gracefully.
+
+---
+
+Operations need a stable format for network transmission. Add to_dict() and from_dict() methods to your Operation class for serialization using only JSON-serializable primitives like str, int, bool, None, lists, and dicts. The round-trip must be lossless so that from_dict(to_dict()) equals the original op via **eq**. Preserve all metadata needed for idempotency and deterministic convergence including replica IDs, operation IDs, and any tie-break fields.

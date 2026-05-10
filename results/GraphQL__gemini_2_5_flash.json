@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 8.318468706400001,
+      "price": 0.03200095,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 5.401763660666667,
+      "price": 0.013737800000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 6.306879877999999,
+      "price": 0.0151155,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

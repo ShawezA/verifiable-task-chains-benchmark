@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "GPT 5 nano",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 67.410371656,
+      "price": 0.0164245,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 57.148190888,
+      "price": 0.01619637,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 54.81943114325,
+      "price": 0.01091762,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

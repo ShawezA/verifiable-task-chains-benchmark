@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 56.981532581500005,
+      "price": 0.00769368,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 46.434652768999996,
+      "price": 0.00530849,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 57.979457642,
+      "price": 0.00431261,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

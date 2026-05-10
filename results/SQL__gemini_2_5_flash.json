@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 9.1505003292,
+      "price": 0.03296915,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 6,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 20.50145110581818,
+      "price": 0.18278835,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 17.691098016166666,
+      "price": 0.07508480000000001,
+      "ICCD": 4
+    }
+  ],
+  "notes": ""
+}

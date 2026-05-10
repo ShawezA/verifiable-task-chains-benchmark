@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 21.366140094666665,
+      "price": 0.0038216,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 20.3074417372,
+      "price": 0.013515260000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 21.715501374800002,
+      "price": 0.01321194,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "Spreadsheet",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 73.1663915275,
+      "price": 0.0078495,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 66.9312625195,
+      "price": 0.0120941,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 79.5904190508,
+      "price": 0.0475772,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

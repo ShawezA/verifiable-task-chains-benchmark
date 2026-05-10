@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 42.483842636333335,
+      "price": 0.01492237,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 57.43086715733333,
+      "price": 0.013142690000000002,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 28.8360093135,
+      "price": 0.01723168,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

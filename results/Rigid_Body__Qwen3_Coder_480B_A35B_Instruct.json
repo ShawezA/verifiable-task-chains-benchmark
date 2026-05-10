@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 11.134047863833333,
+      "price": 0.01867963,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 30.1169864835,
+      "price": 0.02916058,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 11.779339392,
+      "price": 0.00826721,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

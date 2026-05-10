@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 8.72381348375,
+      "price": 0.0035519799999999997,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 9.749154134400001,
+      "price": 0.00659557,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 12.0798213188,
+      "price": 0.01029456,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

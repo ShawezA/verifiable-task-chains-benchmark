@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 11.112704037333335,
+      "price": 0.0222673,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 8.4916964615,
+      "price": 0.0113037,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 17.5861883075,
+      "price": 0.0222739,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

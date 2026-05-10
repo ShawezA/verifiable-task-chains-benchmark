@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 9.608705334333333,
+      "price": 0.0097504,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 20.0216748255,
+      "price": 0.03920568,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 50.50462479075,
+      "price": 0.055529999999999996,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

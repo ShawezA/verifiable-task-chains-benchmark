@@ -1,0 +1,57 @@
+# JSON
+
+Implement a JSON Pointer resolver in Python  according to RFC 6901. Write a Pointer class that takes a path string in its constructor and has a resolve(doc) method that returns the value at that path in a JSON-like structure (nested dicts and lists). The constructor must raise PointerError (a custom exception) for malformed paths, and resolve must raise PointerError if any part of the path doesn't exist.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+
+---
+
+
+Implement a apply_patch(doc, patch) function that applies a JSON Patch (RFC 6902) to a document. Support the add, remove, and replace operations. The function must return a new document without modifying the original. Operations must be atomic: if any operation fails, raise PatchError (a custom exception) and leave the original unchanged. An operation is invalid if it tries to remove a non-existent path or add to an object through a non-existent intermediate key.
+
+
+---
+
+
+Implement a create_patch(doc1, doc2) function that generates a JSON Patch by comparing two JSON objects. For now, only handle flat objects with scalar values (no nesting). The generated patch should use only add, remove, and replace operations and be minimal and deterministic (sort keys for consistency).
+
+
+---
+
+Extend create_patch to handle arrays. When comparing arrays, use a longest common subsequence (LCS) algorithm to generate minimal add and remove operations rather than replacing the entire array when it differs. The function must now handle any valid JSON document structure (nested objects and arrays).
+
+
+---
+
+Upgrade your patch implementation to support RFC 6902's move and copy operations. Update apply_patch to execute them correctly, raising PatchError for invalid operations (e.g., a 'from' path that doesn't exist, or moving a value into itself). Update create_patch to detect when values or subtrees have been moved or copied and generate the more efficient move or copy operation instead of verbose remove+add pairs. Prioritize move over add+remove where applicable.
+
+
+---
+
+
+Add two features for transactional systems. First, implement the test operation in apply_patch: if the value at a path doesn't match the operation's value, the entire patch must fail atomically by raising PatchError. Second, create a create_inverse(doc, patch) function that generates a patch reversing the effects of the given patch. Applying a patch then its inverse must restore the original document. The original doc is needed to retrieve values for inverting remove and replace operations.
+
+
+---
+
+
+Implement a three-way merge function merge(base, doc1, doc2) that takes a base document and two divergent versions and produces a merged document incorporating changes from both. For now, only handle non-conflicting changes (e.g., modifications to different keys or non-overlapping array segments). If changes conflict, raise MergeError (a custom exception).
+
+
+---
+
+
+Upgrade merge to handle conflicts gracefully instead of raising an exception. The function must now return a tuple (merged_document, conflicts_list). The conflicts_list should contain structured conflict objects (your format, but deterministic and containing enough info to resolve: path, base_value, doc1_value, doc2_value). Where conflicts occur, the merged document must contain the value from the base document at that path.
+
+
+---
+
+
+Implement the core of Operational Transformation (OT). Write a transform_op(op1, op2) function that takes two concurrent single patch operations on the same document state and transforms them against each other. Return a tuple (op1_prime, op2_prime) such that applying op1 then op2_prime is equivalent to applying op2 then op1_prime (preserving both users' intentions). Handle interactions between add, remove, and replace on both objects and arrays. Index shifting in arrays is critical. If operations are independent (e.g., different keys), return them unchanged.
+
+
+
+---
+
+Scale your single-operation transform into transform_patch(patch1, patch2) that transforms entire JSON Patches against each other. Return a tuple (patch1_prime, patch2_prime) guaranteeing the OT convergence property: apply(apply(doc, patch1), patch2_prime) equals apply(apply(doc, patch2), patch1_prime). Iterate through operations, transforming each against the operations in the other patch. This is the engine for real-time collaborative applications.

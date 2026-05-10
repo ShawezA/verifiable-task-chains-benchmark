@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 5,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 46.099884977875,
+      "price": 0.03949884,
+      "ICCD": 4
+    },
+    {
+      "run": 2,
+      "len": 4,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 38.952986488375004,
+      "price": 0.03877873,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 57.80717557166666,
+      "price": 0.061662510000000004,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

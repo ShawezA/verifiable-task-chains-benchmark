@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 19.662826264333333,
+      "price": 0.0087215,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 59.20069321633333,
+      "price": 0.0094659,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 54.98265932,
+      "price": 0.0107698,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

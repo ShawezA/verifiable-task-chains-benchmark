@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "GPT 5 nano",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 35.47464202733334,
+      "price": 0.00521896,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 40.93239476833333,
+      "price": 0.005142300000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 60.44576239577777,
+      "price": 0.03295544,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

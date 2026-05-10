@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 53.98994220483333,
+      "price": 0.0570718,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 78.519951909,
+      "price": 0.0692787,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 39.71816279316666,
+      "price": 0.04364458,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

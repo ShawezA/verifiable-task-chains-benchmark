@@ -1,0 +1,35 @@
+{
+  "task": "Text Editor",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 120.88112563019999,
+      "price": 0.07064010000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 77.3782331675,
+      "price": 0.0339518,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 26.157461320666666,
+      "price": 0.00556526,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

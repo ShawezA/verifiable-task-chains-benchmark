@@ -1,0 +1,35 @@
+{
+  "task": "SQL",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 18.437554763,
+      "price": 0.0264336,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 25.44044359033333,
+      "price": 0.0142725,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 3,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 29.00187294866667,
+      "price": 0.0212951,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

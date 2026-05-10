@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 78.95968292574999,
+      "price": 0.0343761,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 73.05512615399999,
+      "price": 0.0172405,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 36.702908025,
+      "price": 0.01873098,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

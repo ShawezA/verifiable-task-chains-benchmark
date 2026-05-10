@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 6,
+      "errors": 7,
+      "recoveries": 5,
+      "duration_sec": 105.54906434884614,
+      "price": 0.06758495,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 32.37497101766667,
+      "price": 0.011014050000000001,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 37.48126193333333,
+      "price": 0.01167425,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

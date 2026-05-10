@@ -1,0 +1,87 @@
+# GraphQL
+
+Create a Python class named "GraphQL" that accepts a GraphQL schema definition string in its constructor.
+
+The parser should handle "type" definitions and recognize the five built-in scalar types: "String", "Int", "Float", "Boolean", and "ID".
+
+Add a public method "get_type" that returns a truthy value if the named type exists in the schema, and a falsy value otherwise. Define and raise a custom "SchemaError" for invalid schemas. For example, when a field references a type that doesn't exist.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Add a public method "execute" to the "GraphQL" class. It takes a "query" string and a "root_value" dictionary.
+
+This method must execute a simple read-only query against the provided "root_value" dictionary, supporting basic and nested field selections. Field values should be resolved by directly matching field names to dictionary keys.
+
+Always return a dictionary with a single "data" key that holds the result. For example: {"data": {"field": "value"}}
+
+---
+
+
+Enhance the query executor to support literal arguments, like user(id: "1").
+
+Update the parser to recognize arguments in the query string. During execution, make these arguments available to the field resolution logic. The public API for "execute" remains unchanged.
+
+
+---
+
+
+Now add support for custom resolver functions. Update the constructor to accept an optional "resolvers" dictionary.
+
+When executing a query, if there's a resolver function for a field, call it instead of just looking up the dictionary key. The resolver function gets two things: the parent object and a dictionary of any arguments.
+
+
+---
+
+
+Add support for GraphQL variables. Update the "execute" method to accept an optional "variables" dictionary.
+
+Parse variable definitions in the query (like query GetUser($id: ID)) and substitute them with the actual values from the "variables" dictionary when running the query.
+
+
+---
+
+
+Extend the schema parser to recognize argument definitions on fields, including list ([Type]) and non-null (Type!) modifiers. These can be nested, like [User!]! (non-null list of non-null users).
+
+During execution, after substituting variables, validate that all required arguments (marked with !) are present. If a required argument is missing or null, raise QueryError.
+
+When a field resolves to a list, apply the child field selections to each element and return the results as an array.
+
+
+---
+
+
+Implement GraphQL's error handling and non-null propagation rules.
+
+The execute method should return a dictionary that can contain both "data" and "errors" keys. The "errors" key holds a list of error objects with at least a "message" field.
+
+If a non-nullable field resolves to null during execution, add an error and propagate null upward to the nearest nullable field. If everything up to the root is non-nullable, "data" itself becomes null.
+
+Validation errors (like missing required arguments) should still raise QueryError before execution starts.
+
+---
+
+
+Add support for GraphQL fragments. The query parser must be able to process named fragment definitions ("fragment Name on Type { ... }"), fragment spreads ("...Name") and inline fragments ("... on Type { ... }").
+
+When executing, expand these fragments so the fields get included in the result. The public API remains unchanged.
+
+---
+
+Extend the schema parser and executor to support interface and union abstract types.
+
+The parser should accept these definitions. When a query returns one of these types, you need to figure out what the actual type is. Do this by calling a special resolver function.
+
+In the resolvers dictionary, add a "__resolve_type" function under the interface or union name. This function looks at the object and returns a string with the actual type name. Then use that type to figure out which fields to include.
+
+---
+
+
+Implement the GraphQL introspection system.
+
+Your executor should be able to answer queries about the schema structure. This includes queries for the "__schema" field to get information about all types in the schema, and the "__type" field to get details about a single named type. Use the schema you've already parsed to answer these queries.
+
+

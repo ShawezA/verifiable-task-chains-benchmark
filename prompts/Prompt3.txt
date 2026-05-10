@@ -1,0 +1,48 @@
+# SQL Optimizer
+
+Create a class named Optimizer and a helper class Query in Python for a cost-based SQL query optimizer. The Query class constructs a representation of a simple query that can scan tables, filter rows, and project columns. The Optimizer class takes a catalog_stats dictionary in its constructor that maps table names to row counts (e.g., {'users': 1000}). Add a get_plan method that takes a Query and returns a deterministic, canonical string representation of the query plan. Two logically identical queries must always produce the exact same output string, and the plan must reflect only what the Query explicitly builds, no implicit operators.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Extend the Optimizer to support transformation rules. Add an add_rule method that accepts a rule_func callable. Each rule takes a plan node and returns either a transformed node (if the rule applies) or the original. Update get_plan to apply all registered rules and return any valid, fully transformed plan (deterministically). Add a classmethod Query.from_plan that takes a node and wraps it as a Query so rules can reconstruct transformed subplans. Rules may return either the original node or one created via from_plan.
+
+
+---
+
+The optimizer must now handle sort order requirements. Extend get_plan to accept an optional required_order parameter (a list of column names like ['username', 'age']). When provided, ensure the final plan satisfies this ordering. If the plan doesn't naturally produce the required order, add an explicit sort operation that's clearly indicated in the canonical plan string. Raise a custom error if ordering by a non-existent column is requested.
+
+---
+
+Transform the optimizer to be cost-based. Extend the Optimizer constructor to also take a cost_model dictionary that maps operator names (like 'scan', 'sort') to cost-per-row values. Update get_plan to explore all valid plans, calculate their total cost using estimated row counts at each step and the cost model, then return the canonical string for the absolute lowest-cost plan. All tie-breaking must be deterministic.
+
+---
+
+Extend your Query representation to support joining two sub-queries. Implement a join reordering algorithm in get_plan that explores different join orders (e.g., (A join B) join C versus A join (B join C)) and uses the cost model to select the cheapest arrangement for multi-table joins.
+
+---
+
+
+Implement predicate pushdown as an automatic transformation rule. When get_plan receives a query with a filter applied after a join, the optimizer must rewrite the plan to push filter conditions onto individual table scans before the join occurs. The cost model should heavily favor plans where filters are performed early, and the optimizer must discover and select these more efficient plans automatically.
+
+
+---
+
+
+Implement cardinality estimation for better plan accuracy. The catalog_stats dictionary will now include detailed statistics like the number of distinct values for specific columns. Use these statistics to estimate the number of rows returned by filter and join operations. Feed these more accurate cardinality estimates into the cost model, leading to better plan choices for queries with complex predicates.
+
+---
+
+Extend your Query builder to express correlated subqueries using IN and EXISTS. Add optimizer rules to decorrelate these subqueries, rewriting them into equivalent join operations (e.g., semi-joins). Use the cost model to verify that the decorrelated plan is cheaper and select it.
+
+---
+
+The optimizer must now distinguish between logical joins and physical join algorithms (HashJoin, SortMergeJoin, NestedLoopJoin). Update get_plan to choose the cheapest physical algorithm for each join. For example, recognize when SortMergeJoin is cheaper because an input is already sorted by the join key (leveraging the sort order system from Prompt 3). The chosen physical algorithm must be identifiable in the final plan string.
+
+
+---
+
+
+Add two mechanisms for user control. First, extend get_plan to accept an optional hints parameter (a list of strings like 'USE_HASH_JOIN(table_a, table_b)') that forces specific optimizer choices even if more expensive. Impossible hints should raise an error. Second, add a set_plan_stability method that takes a tolerance_percent float. When enabled, only switch to a new plan if its cost is lower than the previous best by more than the tolerance percentage. This requires stateful, deterministic caching to prevent plan flips from small statistical changes.

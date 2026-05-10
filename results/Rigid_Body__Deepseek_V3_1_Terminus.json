@@ -1,0 +1,35 @@
+{
+  "task": "Rigid Body",
+  "model": "Deepseek V3.1 Terminus",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 27.47701304425,
+      "price": 0.01161396,
+      "ICCD": 2
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 26.817611162249996,
+      "price": 0.01239298,
+      "ICCD": 2
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 24.67621181725,
+      "price": 0.01139111,
+      "ICCD": 2
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 82.41185489159999,
+      "price": 0.056749600000000004,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 46.314195511,
+      "price": 0.018099,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 60.873172137333334,
+      "price": 0.020846299999999998,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

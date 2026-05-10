@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "gemini 2.5 flash",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 5.338506138,
+      "price": 0.0106134,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 7.649545487599999,
+      "price": 0.028835925,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 4.6786474815000005,
+      "price": 0.0143859,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

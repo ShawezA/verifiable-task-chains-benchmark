@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 96.43541336866666,
+      "price": 0.31248524,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 74.64094883266667,
+      "price": 0.24273999999999998,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 79.25694732975,
+      "price": 0.4046225,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

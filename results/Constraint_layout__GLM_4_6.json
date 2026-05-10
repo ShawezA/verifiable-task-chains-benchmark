@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "GLM 4.6",
+  "currency": "USD",
+  "runs": [
+        {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 39.55224655733334,
+      "price": 0.0214496,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 65.33042959500001,
+      "price": 0.0337295,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 62.73672849833334,
+      "price": 0.0236987,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

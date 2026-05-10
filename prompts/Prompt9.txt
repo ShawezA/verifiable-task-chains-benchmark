@@ -1,0 +1,42 @@
+# Constraint layout
+
+Write a constraint solver in Python. A Variable object has an id, name, and value. A Constraint object represents a linear equation like ax + by + c = 0 and contains a list of Variable objects, a list of coefficients as floats, and a constant as a float. Write a solve function that takes a list of Variable objects and a list of Constraint objects (all equality constraints) and assigns values to all variables. If there's no solution or the system is underdetermined, raise ConstraintError. Use Gaussian elimination with exact rational arithmetic to avoid floating point errors, and return the modified variables list.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Add inequality constraints to the Constraint class with a type attribute: 'eq', 'leq', or 'geq'. Refactor solve to use an optimization approach: minimize the sum of squared constraint violations to zero using a quadratic programming solver you implement (gradient descent with backtracking line search is acceptable). Raise ConstraintError if the minimum violation is above a threshold (1e-9). All equality constraints must be satisfied exactly; inequalities are satisfied when ax + by + c ≤ 0 or ≥ 0. The solver must converge deterministically given the same input order.
+
+---
+
+Add a strength attribute to each Constraint: 'required', 'strong', 'medium', or 'weak'. Required constraints must be satisfied exactly—raise ConstraintError if impossible. For non-required constraints, minimize violations lexicographically by strength priority: all strong violations minimized first, then medium, then weak. When multiple solutions exist at the same strength level, pick the one closest to the initial variable values. Each Variable now has an optional initial_value attribute that defaults to 0.0.
+
+---
+
+Add an EditVariable class that inherits from Variable and has a target attribute. The solve function now accepts an optional edits parameter as a list of EditVariable objects, which are treated as weak equality constraints toward their target values. Add an update_edits function that takes a previous solution, a list of EditVariable objects with new targets, and returns an updated solution. It should warm-start from the previous solution as the initial guess and converge faster than a cold solve.
+
+---
+
+Add a Layout class with width, height, x, y as Variable instances. Add a content_size method that returns (min_width, min_height) as floats—for now, always return (100.0, 100.0). Introduce intrinsic size constraints: automatically generate 'geq' constraints with 'strong' strength so that layout.width ≥ min_width and layout.height ≥ min_height. These are implicit constraints added internally by the solver when a Layout is passed. The solve function must now accept a list of Layout objects and generate these constraints transparently before solving.
+
+---
+
+Add a Container class (subclass of Layout) with a children attribute (list of Layout objects). Container coordinates are absolute; child coordinates are relative to the container's (x, y). Add anchor helper functions: align_left(child, container), align_right, align_top, align_bottom, center_horizontally, center_vertically—each returns a Constraint object with 'required' strength. For example, align_left creates child.x = container.x. Add margin support: each Layout has left_margin, right_margin, top_margin, bottom_margin attributes (floats). Anchors must account for margins (e.g., align_right: child.x + child.width + child.right_margin = container.x + container.width).
+
+---
+
+Add chain helper functions: horizontal_chain(layouts, spacing) and vertical_chain(layouts, spacing). A horizontal chain creates 'required' constraints so that layouts[i+1].x = layouts[i].x + layouts[i].width + spacing for all consecutive pairs. Vertical chains do the same for y and height. Add distribute_horizontally(layouts, container) and distribute_vertically(layouts, container) that create 'required' constraints to evenly space items with equal gaps between them, filling the container span. The gap size is computed implicitly as a function of container size minus total child sizes, divided by number of gaps.
+
+---
+
+Add a ConstraintGroup class with a name and constraints (list). Groups can be activated or deactivated. Add an active attribute (boolean) to ConstraintGroup. The solve function now accepts a groups parameter (list of ConstraintGroup objects) and only includes constraints from active groups. Add a toggle_group(solution, group_name, active) function that deactivates one group, activates another, and re-solves incrementally from the current solution. Ensure no stale constraints leak between group switches—internally clear and rebuild the active constraint set each solve.
+
+---
+
+Add a Grid class (subclass of Container) with rows and columns (both integers). Add track definitions: row_heights and col_widths, each a list of Track objects. A Track has a type ('fixed', 'flex') and a value (float for fixed, weight for flex). The Grid automatically creates child layouts in a rows × columns grid and generates 'required' constraints: fixed tracks get exact size, flex tracks split remaining space proportionally by weight. Add row_gap and col_gap (floats). Children are positioned in reading order (left-to-right, top-to-bottom). Each child's x, y, width, height are fully determined by track constraints.
+
+---
+
+Add animation support: the animate function takes a list of EditVariable objects, a list of target values, and frames (int). It returns a list of solutions (one per frame) where edit targets interpolate linearly from current to target over frames. Each frame's solution must be feasible (all required constraints satisfied). If any intermediate frame would violate required constraints, raise ConstraintError before returning any frames. The solver must guarantee smooth, continuous changes in all variable values across frames (no discontinuous jumps except where geometrically necessary).

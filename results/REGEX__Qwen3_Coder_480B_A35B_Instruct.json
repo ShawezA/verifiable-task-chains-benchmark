@@ -1,0 +1,35 @@
+{
+  "task": "REGEX",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 5,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 21.7372788178,
+      "price": 0.07140019,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 12.309946073666666,
+      "price": 0.00539483,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 5,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 36.16822484518181,
+      "price": 0.09010376,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

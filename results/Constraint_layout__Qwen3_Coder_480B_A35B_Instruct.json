@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 23.642098833000002,
+      "price": 0.00855262,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 40.364874066999995,
+      "price": 0.0141732,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 24.019612527000003,
+      "price": 0.012456909999999998,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

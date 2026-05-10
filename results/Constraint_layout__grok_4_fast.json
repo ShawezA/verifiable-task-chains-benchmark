@@ -1,0 +1,35 @@
+{
+  "task": "Constraint layout",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 81.65815710225,
+      "price": 0.01535005,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 76.3135527035,
+      "price": 0.013990049999999999,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 157.8519415764,
+      "price": 0.022438,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

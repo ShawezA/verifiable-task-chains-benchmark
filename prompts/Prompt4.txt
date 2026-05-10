@@ -1,0 +1,62 @@
+# Rigid Body Physics
+
+Write two classes: Vec2 and RigidBody. Vec2 supports addition, subtraction, scalar multiplication, and component access. RigidBody takes mass, inertia, position (Vec2), linear_velocity (Vec2), angle in radians, and angular_velocity in radians per second. A mass of zero or infinity means the body is static and can't move.
+
+Create a World class initialized with a list of rigid bodies. Its step method takes dt (time in seconds) and iterations (an integer). Apply gravity (represented as Vec2(0, 9.8) since +y points down) and update each non-static body's position and angle using any physics integrator. Ignore the iterations parameter for now.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+
+---
+
+Add a Polygon shape class that takes a list of Vec2 vertices in any winding order. You can assume all polygons are convex. Modify RigidBody so it's initialized with a shape, but make this parameter optional: if omitted, use a default 1×1 square centered at the local origin.
+
+Add a get_potential_collisions method to World that returns a list of body pairs whose axis-aligned bounding boxes overlap after a step. Each pair should appear once, in any order, and bodies shouldn't be paired with themselves. Treat Axis-Aligned Bounding Boxes that touch at edges or corners as overlapping.
+
+---
+
+Implement precise collision detection using the Separating Axis Theorem. Create a CollisionInfo class that stores the penetration depth (a float), the collision normal (a Vec2 pointing from the first body to the second), and the contact points (a list of Vec2s in world coordinates).
+
+Write a top-level function get_collision_info that takes two rigid bodies and performs a precise polygon collision check. If they're colliding, return a CollisionInfo with the minimal penetration depth, the corresponding normal, and the contact points. If they're not colliding, return None.
+
+---
+
+Use the iterations parameter in World.step to control how many times collision resolution runs per step. After updating positions, detect all colliding pairs and apply impulses to their linear and angular velocities to resolve penetration. Handle mass differences correctly, including collisions with static bodies. Assume zero restitution (perfectly inelastic) and no friction.
+
+Use an iterative sequential-impulse solver that runs for the specified number of iterations. Add positional stabilization using Baumgarte bias: calculate bias as -(0.2/dt) times max(penetration - 0.01, 0) and incorporate it when applying impulses. Treat infinite mass or inertia as immovable.
+
+
+---
+
+Add three material properties to RigidBody: static friction, dynamic friction, and restitution. Include these during initialization and update your impulse calculations to account for them. Restitution controls bounciness: 1.0 is perfectly elastic, 0.0 is perfectly inelastic. Combine restitution between two bodies by taking the maximum of their values, and default to 0.0.
+
+Friction prevents sliding. Combine friction coefficients using the geometric mean of the two bodies' values. Apply impulses that correctly counter relative tangential motion at contact points.
+
+
+---
+
+Make the Polygon class calculate its own area, geometric centroid, and moment of inertia for a given mass assuming uniform density. Expose these through a get_centroid method returning a Vec2 and a get_moment_of_inertia method taking a mass and returning a float.
+
+Update RigidBody to use its shape's centroid as the center of mass. The position attribute now refers to the center of mass position, and all physics calculations (velocity, rotation, impulse application) happen relative to this point. Off-center collisions should produce the correct torque and change in angular velocity.
+
+---
+
+Add constraint support. Create a DistanceJoint class initialized with two rigid bodies, an anchor point on each body in local coordinates, and a fixed distance to maintain between those anchors.
+
+Add an add_joint method to World that registers a constraint. During step, after the main collision resolution phase, iteratively apply impulses to enforce all joint constraints and maintain the specified distances.
+
+---
+
+Implement sleeping to improve performance. A RigidBody sleeps when both its linear and angular velocity stay below a small threshold for a brief period. Bodies that interact (forming an "island" of connected objects) should all be awake together. When an entire island comes to rest, put all its bodies to sleep. Sleeping bodies skip physics updates. Wake a sleeping body if it's hit by an active body or if a constraint attached to it gets stressed.
+
+Add an is_sleeping method to RigidBody that returns a boolean indicating whether the body is currently asleep.
+
+---
+
+Add spatial querying to World. Write a raycast method that takes an origin Vec2, a direction Vec2, and a max_distance float. Cast a ray from the origin along the direction and return a RaycastResult for the first body whose shape the ray intersects within max_distance, or None if nothing is hit.
+
+RaycastResult should contain the body that was hit, the exact intersection point as a Vec2, the surface normal at that point as a Vec2, and the distance from the origin to the hit. If the ray starts inside a shape, count it as an immediate hit at distance zero.
+
+---
+
+Improve solver stability using warm starting. In your collision resolution within World.step, cache the impulse magnitudes (both normal and tangential) applied at each contact point. In subsequent frames, if the same contact points are detected, use the cached impulses from the previous frame as the starting values for this frame's solver iterations. This should significantly reduce the iterations needed for stacks to stabilize and prevent jitter and sinking. The API doesn't change: the difference will show in how stable complex scenarios like tall stacks become.

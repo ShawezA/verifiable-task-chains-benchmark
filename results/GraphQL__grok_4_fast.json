@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 161.45259111599998,
+      "price": 0.01906525,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 4,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 82.3132231781,
+      "price": 0.0386967,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 87.12360510600001,
+      "price": 0.0208198,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

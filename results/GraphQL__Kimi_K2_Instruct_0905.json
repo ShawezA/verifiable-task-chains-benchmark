@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 27.528686192,
+      "price": 0.017335499999999997,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 19.879492431333333,
+      "price": 0.0084611,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 0,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 21.163443409499997,
+      "price": 0.0028196000000000002,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

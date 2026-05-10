@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "gemini 2.5 pro",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 60.26642781766666,
+      "price": 0.21643125000000002,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 37.258877196,
+      "price": 0.1462075,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 44.86146722733333,
+      "price": 0.16780125,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

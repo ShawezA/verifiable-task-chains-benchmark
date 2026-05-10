@@ -1,0 +1,35 @@
+{
+  "task": "GIT",
+  "model": "GPT 5",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 7,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 171.76642384930767,
+      "price": 1.4960882500000001,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 8,
+      "errors": 6,
+      "recoveries": 4,
+      "duration_sec": 194.1316372409286,
+      "price": 1.7441014999999997,
+      "ICCD": 1
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 154.81418770366668,
+      "price": 0.7629515,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

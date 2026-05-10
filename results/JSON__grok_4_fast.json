@@ -1,0 +1,35 @@
+{
+  "task": "JSON",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 4,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 163.533102182375,
+      "price": 0.052911599999999996,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 80.6599621745,
+      "price": 0.0117957,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 4,
+      "errors": 5,
+      "recoveries": 3,
+      "duration_sec": 112.14523383599999,
+      "price": 0.04568325,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,53 @@
+# REGEX
+
+Write a lexer for regex patterns in Python. The lex function should take a pattern string and return a list of Token objects ending with an EOF token. Define a RegexError exception with optional pos attribute and a LexerError subclass. Each Token needs type, value, and pos attributes. Recognize five token types: LITERAL (any character except metacharacters), DOT ('.'), ALT ('|'), LPAREN ('('), RPAREN (')'), and EOF (empty value, pos equals pattern length). Accept any input without errors.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Build a parse function taking a pattern string and returning an ASTNode. Define ParserError (inherits RegexError) with pos. The ASTNode class has type, children (tuple), value, and pos. Node types are 'literal' (value=character), 'dot' (value="."), 'concat', 'alt', 'group' (value=None). Grammar is alternation (lowest precedence), then concatenation (juxtaposition), then atoms (literal/dot/parentheses). Raise ParserError for unclosed groups or leading/trailing '|'. Add a compile function returning a Regex object with pattern, flags attributes and match, findall, replace, split methods (raise NotImplementedError for now).
+
+---
+
+
+Extend the lexer to emit QUANT tokens for '_', '+', and '?'. In the parser, after parsing an atom, if a QUANT token follows, wrap the atom in a 'quant' ASTNode. The quant node's children tuple contains the atom, and its value is a dictionary with 'min' (int), 'max' (int or None), and 'lazy' (False). Map '_' to min=0/max=None, '+' to min=1/max=None, and '?' to min=0/max=1. Raise ParserError if a quantifier has no preceding atom or if two quantifiers appear consecutively.
+
+
+---
+
+
+Add brace quantifiers to the lexer: recognize {m}, {m,}, and {m,n} as single QUANT tokens. Add CARET and DOLLAR token types for '^' and '$'. Add ESCAPE tokens for \n (newline), \t (tab), and \ (literal backslash). In the parser, handle brace quantifiers by setting appropriate min/max values in quant nodes. Create 'anchor' ASTNodes for '^' and '$' with value set to the character. Convert ESCAPE tokens to 'literal' nodes with the decoded character value—\n becomes a literal with newline character, \t with tab, \ with backslash. Raise ParserError for malformed braces like {2,1} or {,3}, quantifiers without preceding atoms, or trailing backslash.
+
+
+---
+
+Add LBRACK/RBRACK tokens for brackets and ESCAPE tokens for \xNN and \uNNNN. Parse [...] into 'char_class' nodes with value={'negate': bool, 'items': list} containing literals or ('range', start, end) tuples. Decode all escapes to literal nodes with actual characters. When '?' follows a quantifier, set lazy=True in the quant node's value. Assign 1-based sequential indices to capture groups by opening parenthesis position, store in group node's value. Raise LexerError for invalid escapes, ParserError for invalid ranges or unclosed brackets.
+
+---
+
+
+Implement the Regex.match method to take a text string and return True if the pattern matches anywhere in text, False otherwise. Add a standalone match function that takes pattern and text. The engine must handle literals, dot, concatenation, alternation, grouping, greedy quantifiers (*, +, ?, {m,n}), character classes with negation and ranges, and anchors (^ for start of string, $ for end of string). Use leftmost-first matching to find the earliest possible match position. Treat all quantifiers as greedy regardless of any lazy flag in the AST.
+
+
+---
+
+
+Change Regex.match to return a MatchResult object with span (a tuple of start and end positions) and groups (a dictionary mapping capture indices to their spans, where group 0 is the overall match), or return None on failure. Implement lazy quantifier behavior by matching the minimum number of characters that still allows the pattern to succeed. Add support for inline flags: (?i) for case-insensitive matching, (?s) for dot matching newlines, and (?m) for multiline mode. Also add word boundaries with \b and \B.
+
+---
+
+
+Implement replace(pattern, repl, text, flags) with global replacement supporting \1, \2, \g<name> backreferences. Implement split(pattern, text, flags) returning non-empty segments without delimiters. Implement findall(pattern, text, flags) returning matched strings (no groups), tuples (multiple groups), or single strings (one group). Add shorthands: \w=[A-Za-z0-9_], \d=[0-9], \s=whitespace, and their negations \W, \D, \S.
+
+---
+
+
+Add atomic groups with (?>...) syntax that prevent backtracking into the group once it matches. Add possessive quantifiers by allowing '+' immediately after any quantifier (*+, ++, ?+, {m,n}+)—these match greedily but forbid giving back characters during backtracking. Add conditional subpatterns (?(id/name)yes|no) where id is a group number or name is a group name; if that group has matched in the current attempt, match the 'yes' branch, otherwise match the 'no' branch. Add named capturing groups with (?P<name>...) syntax—named groups participate in the standard left-to-right numbering alongside unnamed groups.
+
+
+---
+
+
+Add whole-pattern recursion with (?R) which expands to the entire regex pattern recursively at the current matching position. Add named subroutine calls with (?P>name) which expand to the subpattern captured by the named group (?P<name>...). Group indices and names remain stable across recursive calls. Recursive calls don't expose transient inner captures unless they're explicitly defined as capture groups in the original pattern. Maintain deterministic leftmost-longest matching behavior throughout.

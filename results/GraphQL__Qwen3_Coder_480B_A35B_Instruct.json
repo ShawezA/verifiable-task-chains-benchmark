@@ -1,0 +1,35 @@
+{
+  "task": "GraphQL",
+  "model": "Qwen3-Coder-480B-A35B-Instruct",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 14.5546453462,
+      "price": 0.013934760000000001,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 4,
+      "recoveries": 2,
+      "duration_sec": 31.106263328166666,
+      "price": 0.021080930000000005,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 9.301777956666667,
+      "price": 0.00511698,
+      "ICCD": 1
+    }
+  ],
+  "notes": ""
+}

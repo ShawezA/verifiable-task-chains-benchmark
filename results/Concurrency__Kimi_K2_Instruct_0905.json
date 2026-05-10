@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "Kimi-K2-Instruct-0905",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 2,
+      "recoveries": null,
+      "duration_sec": 29.18807369966667,
+      "price": 0.0072607,
+      "ICCD": 1
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 47.065627578800004,
+      "price": 0.032729100000000004,
+      "ICCD": 0
+    },
+    {
+      "run": 3,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 22.1905319345,
+      "price": 0.0074887,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

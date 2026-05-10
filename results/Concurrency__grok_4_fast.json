@@ -1,0 +1,35 @@
+{
+  "task": "Concurrency",
+  "model": "grok 4 fast",
+  "currency": "USD",
+  "runs": [
+    {
+      "run": 1,
+      "len": 1,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 40.519196431750004,
+      "price": 0.0052283,
+      "ICCD": 0
+    },
+    {
+      "run": 1,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 85.68566442720001,
+      "price": 0.017312550000000003,
+      "ICCD": 0
+    },
+    {
+      "run": 2,
+      "len": 2,
+      "errors": 3,
+      "recoveries": 1,
+      "duration_sec": 85.53430302000001,
+      "price": 0.0172143,
+      "ICCD": 0
+    }
+  ],
+  "notes": ""
+}

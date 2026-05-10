@@ -1,0 +1,57 @@
+# Spreadsheet
+
+Write a Python spreadsheet engine with a Sheet class. The constructor takes no arguments. Implement set_cell(ref, content) where ref is a string like "A1" and content is either a string, number, or formula string starting with "=". Implement get_value(ref) returning the computed value. Support integer and float literals, basic arithmetic (+, -, *, /, ^), parentheses, and cell references like A1 or B2. Return error strings "#DIV/0!" for division by zero, "#NAME?" for unknown references, "#REF!" for invalid cell references, and "#VALUE!" for type mismatches in arithmetic (e.g., "text"+5). Valid columns are A–ZZZ; valid rows are 1–1000. Empty cells evaluate to 0 in arithmetic.
+
+Put the entire implementation in a single Python code block that always contains the entire code (don't create regressions between prompts). Any text outside of that block will be ignored. This applies to all prompts beginning with this one.
+
+---
+
+
+Build a dependency graph to track which cells depend on which. When a cell is updated, recalculate all its dependents in topological order (bottom-up). Detect dependency cycles: if a cycle exists, all cells participating in the cycle must return the error string "#CYCLE!". A cell not in the cycle but depending on a cycle cell also returns "#CYCLE!". Ensure that modifying a cell triggers recalculation only for affected dependents, not the entire sheet. Raise no exceptions; all errors are returned as strings.
+
+---
+
+
+Add support for range references in formulas using the syntax A1:B3. Implement four aggregate functions: SUM, AVERAGE, MIN, and MAX. Each takes a single range argument (e.g., =SUM(A1:A5)). Blank cells in a range count as 0. If any cell in the range contains an error, the function propagates that error (prefer the first error encountered in column-major order: A1, A2, B1, B2, etc.). MIN and MAX over an empty range (all blanks) return "#N/A!". AVERAGE of all blanks returns "#DIV/0!". Nested ranges like SUM(A1:B2, C1:C3) are not yet supported—return "#VALUE!" if the argument is not a single range.
+
+
+---
+
+
+Implement absolute and relative references: $A$1 (absolute column and row), $A1 (absolute column, relative row), A$1 (relative column, absolute row), and A1 (both relative). Add a method copy_paste(src_ref, dst_ref) that copies the formula from src_ref to dst_ref, adjusting relative references appropriately. Absolute parts remain fixed; relative parts shift by the difference in rows/columns. If src_ref contains a value (not a formula), dst_ref receives the same value. If src_ref is empty, dst_ref is cleared. Pasting a formula never changes the source cell. References that adjust outside the valid range (columns A-ZZZ, rows 1-1000) become "#REF!" in the pasted formula.
+
+
+---
+
+
+Add support for string literals in formulas using double quotes (e.g., "hello"). Implement the concatenation operator & which works only on strings. Numbers must be explicitly converted: concatenating a number with a string without conversion returns "#VALUE!". Empty cells evaluate to empty string "" when used with &. Implement three functions: TEXT(value, fmt) always converts value to string using fmt="0" for integers or fmt="0.00" for two decimals (just use Python formatting); VALUE(text) converts string to number or returns "#VALUE!" if not numeric; and CONCATENATE(arg1, arg2, ...) which joins all arguments as strings (numbers auto-convert). Strings in arithmetic return "#VALUE!".
+
+
+---
+
+
+Add date and time support. Use the Excel 1900 date system including the historical leap-year bug: serial 1 = 1900-01-01, and serial 60 is the non-existent 1900-02-29. Dates are stored as integers (days since 1900-01-01). Implement DATE(year, month, day) returning an integer serial. Implement TODAY() and NOW(): TODAY returns the current date as an integer; NOW returns the current datetime as a float (integer day + fractional time). Inject the current time via a set_clock(datetime_obj) method on Sheet (default to a fixed datetime like 2025-01-01 00:00:00 for tests). Dates can be used in arithmetic (e.g., DATE(2025,1,10) - DATE(2025,1,5) = 5). Implement TIME(hour, minute, second) returning a fraction of a day. Invalid dates (e.g., month=13) return "#VALUE!".
+
+
+---
+
+
+Implement volatile functions: RAND() returns a random float in [0, 1), and RANDBETWEEN(low, high) returns a random integer in [low, high]. Volatile functions recalculate every time the sheet is computed, even if their dependencies haven't changed. Add a recalculate() method that forces re-evaluation of all cells containing volatile functions and all their dependents. Use a seeded random number generator: add set_seed(seed) method to make randomness deterministic for tests. Non-volatile formulas only recalculate when their dependencies change. Track volatility per cell: if a cell's formula contains a volatile function anywhere (even nested), it is volatile.
+
+
+---
+
+
+Implement array formulas and spill behavior. When a formula is entered as an array formula using set_array_formula(ref, formula), it computes multiple values and "spills" into adjacent cells. For example, =A1:A3*2 in B1 spills results into B1, B2, B3. The spill region is determined by the result dimensions. If the spill region overlaps with a non-empty cell (except the formula cell itself), all cells in the spill region return "#SPILL!". If array operands have mismatched shapes (e.g., A1:A3 + B1:B5), return "#N/A!" for all results. Scalar operations broadcast (e.g., A1:A3 + 5). Reading a spill cell with get_value returns its computed value; spill cells are read-only via set_cell and return an error if set directly. Remove spill with clear_cell(ref) on the formula cell.
+
+
+---
+
+
+Implement INDEX(range, row, col) returning the value at the given position in range (1-indexed); out-of-bounds returns "#REF!". Implement MATCH(lookup_value, lookup_range, match_type) where match_type is 0 (exact), 1 (largest ≤ value, assumes ascending sorted range), or -1 (smallest ≥ value, assumes descending). Return the 1-indexed position or "#N/A!" if not found. Implement VLOOKUP(lookup_value, table_range, col_index, range_lookup) where col_index is 1-indexed. If range_lookup is FALSE/0, do exact match in the first column; if TRUE/1, do approximate match (assumes sorted). Return "#N/A!" if not found, "#REF!" if col_index is out of bounds. For approximate match, return the largest value ≤ lookup_value; ties return the first match row.
+
+
+---
+
+
+Add iterative calculation mode to resolve circular references. Add enable_iterations(max_iterations, tolerance) method on Sheet. When enabled, circular dependencies are allowed: iterate recalculation up to max_iterations times. Stop early if the maximum absolute change in any cell value is less than tolerance (compare numeric values; strings/errors don't participate in convergence). If not converged after max_iterations, all cycle cells return "#CYCLE!". If converged, return the stable values. Iterative mode is off by default. Test convergence with formulas like A1: =0.5B1+1, B1: =0.5A1 (should converge to A1≈4/3, B1≈2/3 if iterative is on). Track iteration count and expose via get_iteration_count() for debugging.
