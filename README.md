@@ -2,7 +2,7 @@
 
 This repository contains the artefacts accompanying the paper
 *"Evaluating Long-Horizon Reasoning and Self-Correction in Large Language
-Models with Verifiable Task Chains"*, accepted at PACIS 2026.
+Models with Verifiable Task Chains"* to appear at PACIS 2026.
 
 It provides everything needed to **understand, inspect, and replicate** the
 benchmark artefacts and reported metrics:
