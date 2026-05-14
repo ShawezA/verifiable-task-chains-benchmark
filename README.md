@@ -15,9 +15,11 @@ The benchmark measures sequential Python code generation and single-attempt
 self-correction under conditions where earlier code is extended or refactored
 at every step, and all previous tests are re-run (cumulative regression).
 
-All benchmark and pilot runs were conducted between 2025-08-17 and 2025-11-21.
-Reported API costs reflect the USD values returned by the OpenRouter API
-at the time of each run. Model names follow the OpenRouter naming scheme.
+Pilot development runs were conducted from 2025-08-17. The actual model
+evaluation runs reported in the paper were conducted on October 12–14 and
+November 21, 2025. Reported API costs reflect the USD values returned by the
+OpenRouter API at the time of each run. Model names follow the OpenRouter
+naming scheme.
 
 ## Models
 
